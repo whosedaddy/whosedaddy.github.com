@@ -1,13 +1,13 @@
 
-title: My Resume # your title
-url: 'http://junlulocky.com'
-baseurl: '/online-cv' #change it according to your repository name
+title: SUNAo的个人小站 # your title
+url: 'https://whosedaddy.github.io'
+baseurl: 'https://github.com/whosedaddy' #change it according to your repository name
 
 
 
 # Profile information
-yourname: Brown Smith  ## put your name
-location: San Francisco , CA
+yourname: SUNAo  ## put your name
+location: ShenZhen , China
 
 
 ## Social Profiles
