@@ -2,7 +2,7 @@
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script>
-    /* Google map
+    /* Baidu map
     ------------------------------------------------*/
     var map = '';
     var center;
@@ -10,17 +10,17 @@
     function initialize() {
         var mapOptions = {
                             zoom: 16,
-                            center: new google.maps.LatLng(13.758468,100.567481),
+                            center: new baidu.maps.LatLng(13.758468,100.567481),
                             scrollwheel: false
                         };  
     
-        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+        map = new baidu.maps.Map(document.getElementById('baidu-map'),  mapOptions);
 
-        google.maps.event.addDomListener(map, 'idle', function() {
+        baidu.maps.event.addDomListener(map, 'idle', function() {
             calculateCenter();
         });
     
-        google.maps.event.addDomListener(window, 'resize', function() {
+        baidu.maps.event.addDomListener(window, 'resize', function() {
             map.setCenter(center);
         });
     } // initialize
@@ -29,16 +29,16 @@
         center = map.getCenter();
     }
 
-    function loadGoogleMap(){
+    function loadBaiduMap(){
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+        script.src = 'http://map.baidu.com' + 'callback=initialize';
         document.body.appendChild(script);
     }
   
     // DOM is ready.
     $(document).ready(function(){
-        loadGoogleMap();
+        loadBaiduMap();
     });
 </script>
 
