@@ -319,7 +319,7 @@ body {
 .desc2 ul {
 	padding: 10px 15px 30px;
 	line-height: 2;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 
 /****box design style*****/
