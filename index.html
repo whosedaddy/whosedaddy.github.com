@@ -26,7 +26,7 @@ layout: default
     </div>
     <div class="row margin-b-30">
 		<div id="div1">
-		<ul>
+		<ul id="ul1">
 		<li>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="box london">
@@ -84,7 +84,7 @@ layout: default
 		</div>
 
 		<div id="div2">
-		<ul>
+		<ul id="ul1">
 		<li>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="box paris">
@@ -183,5 +183,47 @@ layout: default
 </div> <!-- .content-main -->
 </div> <!-- .main-page -->
 </div> <!-- .row -->           
-            
+<script>
+	$(document).ready(function(){
+		var div1 = $(".div1"),
+		div2 = $(".div2"),
+		ul1 = $(".ul1").li,
+		ul2 = $(".ul2").li,
+		index = 0;
+		timer1 = null;
+		timer2 = null;
+		
+		timer1 = setInterval(autoPlay, 5000);
+		timer2 = setInterval(autoPlay, 5000);
 
+		
+		div1.onmouseover = function(){
+			clearInterval(timer1);
+		}
+		
+		div2.onmouseover = function(){
+			clearInterval(timer2);
+		}
+		
+		div1.onmouseout = function(){
+			setInterval(autoPlay, 5000);
+		}
+		
+		div2.onmouseout = function(){
+			setInterval(autoPlay, 5000);
+		}
+		
+		function autoPlay(){
+			if(++index >= ul1.length)index = 0;
+			changediv(index);
+		}
+		
+		function changediv(curIndex){
+			for(var i = 0; i < ul1.length; ++i){
+				ul1[i].style.display = "none";
+				ul2[i].style.display = "none";
+			}
+			ul1[curIndex].style.display = "block";
+			ul2[curIndex].style.display = "block";
+		}
+</script>		
