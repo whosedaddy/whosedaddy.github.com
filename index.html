@@ -84,7 +84,7 @@ layout: default
 		</div>
 
 		<div id="div2">
-		<ul id="ul1">
+		<ul id="ul2">
 		<li>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="box paris">
@@ -185,16 +185,16 @@ layout: default
 </div> <!-- .row -->           
 <script>
 	$(document).ready(function(){
-		var div1 = $(".div1"),
-		div2 = $(".div2"),
-		ul1 = $(".ul1").li,
-		ul2 = $(".ul2").li,
+		var div1 = document.getElementById('div1'),
+		div2 = $ document.getElementById('div2'),
+		ul1 = document.getElementById('ul1').getElementsByTagName("li"),
+		ul2 = document.getElementById('ul2').getElementsByTagName("li"),
 		index = 0;
 		timer1 = null;
 		timer2 = null;
 		
-		timer1 = setInterval(autoPlay, 5000);
-		timer2 = setInterval(autoPlay, 5000);
+		timer1 = setInterval(autoPlay1, 5000);
+		timer2 = setInterval(autoPlay2, 5000);
 
 		
 		div1.onmouseover = function(){
@@ -213,17 +213,28 @@ layout: default
 			setInterval(autoPlay, 5000);
 		}
 		
-		function autoPlay(){
+		
+		function autoPlay1(){
 			if(++index >= ul1.length)index = 0;
-			changediv(index);
+			changediv1(index);
 		}
 		
-		function changediv(curIndex){
+		function changediv1(curIndex){
 			for(var i = 0; i < ul1.length; ++i){
 				ul1[i].style.display = "none";
-				ul2[i].style.display = "none";
 			}
 			ul1[curIndex].style.display = "block";
+		}
+		
+		function autoPlay2(){
+			if(++index >= ul2.length)index = 0;
+			changediv2(index);
+		}
+		
+		function changediv2(curIndex){
+			for(var i = 0; i < ul2.length; ++i){
+				ul2[i].style.display = "none";
+			}
 			ul2[curIndex].style.display = "block";
 		}
 </script>		
