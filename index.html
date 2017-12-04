@@ -184,7 +184,7 @@ layout: default
 </div> <!-- .main-page -->
 </div> <!-- .row -->           
 <script>
-	$(document).ready(function(){
+	window.onload=function(){
 		var div1 = document.getElementById('div1'),
 		div2 = document.getElementById('div2'),
 		ul1 = document.getElementById('ul1').getElementsByTagName("li"),
@@ -237,4 +237,5 @@ layout: default
 			}
 			ul2[curIndex].style.display = "block";
 		}
+	}
 </script>		
