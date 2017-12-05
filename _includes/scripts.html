@@ -8,17 +8,17 @@
 	$("#div2").hide();
 	$("#div4").hide();
 	
-	var int1=setInterval(autoshow1,6000);
-	var int2=setInterval(autoshow2,6000);
+	var int1=setInterval(autoshow1,5000);
+	var int2=setInterval(autoshow2,5000);
 	
 	function autoshow1(){
-		$("#div1").toggle();
-		$("#div2").toggle();
+		$("#div1").toggle("slow");
+		$("#div2").toggle("slow");
 	};	
 	
 	function autoshow2(){
-		$("#div3").toggle();
-		$("#div4").toggle();
+		$("#div3").toggle("slow");
+		$("#div4").toggle("slow");
 	};
 	
 	function clearInt() {
@@ -32,10 +32,10 @@
 	
 	function setInt() {
 		$('#div5').mouseout(function() {
-			int1=setInterval(autoshow1,6000);
+			int1=setInterval(autoshow1,5000);
 		});
 		$('#div6').mouseout(function() {
-			int2=setInterval(autoshow2,6000);
+			int2=setInterval(autoshow2,5000);
 		});
 	};
 	clearInt();
