@@ -5,7 +5,32 @@
 
 
 <script type="text/javascript">
-
+	$("#div2").hide();
+	$("#div4").hide();
+	
+	setInterval(autoshow,3000);
+	
+	function autoshow(){
+		$("#div1").toggle();
+		$("#div2").toggle();
+		$("#div3").toggle();
+		$("#div4").toggle();
+	};
+	
+	function clearInt() {
+		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseover(function() {
+			clearInterval(int);
+		})
+	};
+	
+	function setInt() {
+		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseout(function() {
+			int=setInterval(autoshow,3000);
+		})
+	};
+	clearInt();
+	setInt();
+			
 </script>
 
 
