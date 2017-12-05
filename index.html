@@ -26,7 +26,7 @@ layout: default
     </div>
     <div class="row margin-b-30">
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="height:552.916px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="box london" id="div1" style="overflow:hidden;display:inline;">
                 <div class="box-icon">
                     <img src="assets/images/home-img-2.jpg" alt="Image" class="img-responsive">
@@ -76,7 +76,7 @@ layout: default
 
 
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="height:552.916px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="box paris" id="div3" style="overflow:hidden;display:inline;">
                 <div class="box-icon">
                     <img src="assets/images/home-img-3.jpg" alt="Image" class="img-responsive">
@@ -169,5 +169,30 @@ layout: default
 </div> <!-- .main-page -->
 </div> <!-- .row -->           
 <script>
+	$("#div2").hide();
+	$("#div4").hide();
 	
+	setInterval(autoshow,3000);
+	
+	function autoshow(){
+		$("#div1").toggle();
+		$("#div2").toggle();
+		$("#div3").toggle();
+		$("#div4").toggle();
+	};
+	
+	function clearInt() {
+		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseover(function() {
+			clearInterval(int);
+		})
+	};
+	
+	function setInt() {
+		$('col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseout(function() {
+			int=setInterval(autoshow,3000);
+		})
+	};
+	clearInt();
+	setInt();
+		
 </script>		
