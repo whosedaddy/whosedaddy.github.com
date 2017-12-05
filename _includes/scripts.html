@@ -5,20 +5,20 @@
 
 
 <script type="text/javascript">
-	$("#div2").css("visibility:hidden");
-	$("#div4").css("visibility:hidden");
+	$("#div2").hide();
+	$("#div4").hide();
 	
 	var int1=setInterval(autoshow1,5000);
 	var int2=setInterval(autoshow2,5000);
 	
 	function autoshow1(){
-		$("#div1").toggleClass("visibility:hidden");
-		$("#div2").toggleClass("visibility:hidden");
+		$("#div1").toggle();
+		$("#div2").toggle();
 	};	
 	
 	function autoshow2(){
-		$("#div3").toggleClass("visibility:hidden");
-		$("#div4").toggleClass("visibility:hidden");
+		$("#div3").toggle();
+		$("#div4").toggle();
 	};
 	
 	function clearInt() {
