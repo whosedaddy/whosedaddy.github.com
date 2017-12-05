@@ -24,20 +24,20 @@
 	function clearInt() {
 		$('#div5').mouseover(function() {
 			clearInterval(int1);
-		})
+		});
 		$('#div6').mouseover(function() {
 			clearInterval(int2);
-		})
+		});
 
 	};
 	
 	function setInt() {
 		$('#div5').mouseout(function() {
-			int1=setInterval(autoshow,5000);
-		})
+			int1=setInterval(autoshow1,5000);
+		});
 		$('#div6').mouseout(function() {
-			int2=setInterval(autoshow,5000);
-		})
+			int2=setInterval(autoshow2,5000);
+		});
 	};
 	clearInt();
 	setInt();
