@@ -22,19 +22,19 @@
 	};
 	
 	function clearInt() {
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseover(function() {
+		$('#div5').mouseover(function() {
 			clearInterval(int1);
 		});
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseover(function() {
+		$('#div6').mouseover(function() {
 			clearInterval(int2);
 		});
 	};
 	
 	function setInt() {
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseout(function() {
+		$('#div5').mouseout(function() {
 			int1=setInterval(autoshow1,6000);
 		});
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseout(function() {
+		$('#div6').mouseout(function() {
 			int2=setInterval(autoshow2,6000);
 		});
 	};
