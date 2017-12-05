@@ -44,18 +44,22 @@
 </script>
 -->
 <script type="text/javascript">
-	var width = $('#div1').width();
+	var hei = $('#div1').height();
+	var li1 = $('#ul1 li');
+	var li2 = $('#ul2 li');
+	
 	var index1 = 0;
 	var index2 = 0;
-	$('#div1').css({'overflow:hidden'});
-	$('#div2').css({'overflow:hidden'});
-	$('#div3').css({'overflow:hidden'});
-	$('#div4').css({'overflow:hidden'});
 	
 	var int1=setInterval(change1,5000);
 	var int2=setInterval(change2,5000);
 	
 	function change1(){
+		if (index1 == 0){
+			$li1[index1].animate({height:'+=hei'});
+			$li1[index1+1].animate({height:'+=hei'});
+		}
+		
 	
 </script>
 		
