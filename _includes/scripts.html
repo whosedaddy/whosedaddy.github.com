@@ -22,19 +22,25 @@
 	};
 	
 	function clearInt() {
-		$('#div6').mouseover(function() {
+		$('#div1').mouseover(function() {
 			clearInterval(int1);
 		});
-		$('#div5').mouseover(function() {
+		$('#div2').mouseover(function() {
+			clearInterval(int1);
+		});
+		$('#div3').mouseover(function() {
+			clearInterval(int2);
+		});
+		$('#div4').mouseover(function() {
 			clearInterval(int2);
 		});
 	};
 	
 	function setInt() {
-		$('#div5').mouseout(function() {
+		$('#div1,#div2').mouseout(function() {
 			int1=setInterval(autoshow1,5000);
 		});
-		$('#div6').mouseout(function() {
+		$('#div3,#div4').mouseout(function() {
 			int2=setInterval(autoshow2,5000);
 		});
 	};
