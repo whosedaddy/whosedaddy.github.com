@@ -8,24 +8,35 @@
 	$("#div2").hide();
 	$("#div4").hide();
 	
-	setInterval(autoshow,3000);
+	var int1=setInterval(autoshow1,5000);
+	var int2=setInterval(autoshow2,5000);
 	
-	function autoshow(){
-		$("#div1").toggle();
-		$("#div2").toggle();
-		$("#div3").toggle();
-		$("#div4").toggle();
+	function autoshow1(){
+		$("#div1").toggle(slow);
+		$("#div3").toggle(slow);
+	};	
+	
+	function autoshow2(){
+		$("#div2").toggle(slow);
+		$("#div4").toggle(slow);
 	};
 	
 	function clearInt() {
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseover(function() {
-			clearInterval(int);
+		$('#div5').mouseover(function() {
+			clearInterval(int1);
 		})
+		$('#div6').mouseover(function() {
+			clearInterval(int2);
+		})
+
 	};
 	
 	function setInt() {
-		$('.col-xs-12 col-sm-12 col-md-6 col-lg-6').mouseout(function() {
-			int=setInterval(autoshow,3000);
+		$('#div5').mouseout(function() {
+			int1=setInterval(autoshow,5000);
+		})
+		$('#div6').mouseout(function() {
+			int2=setInterval(autoshow,5000);
 		})
 	};
 	clearInt();
