@@ -1,181 +1,39 @@
 ---
 layout: default
+current: home
+class: 'home-template'
+navigation: True
 ---
 
+<!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
 
-
-
-
-<div class="content-main">
-    <div class="row margin-b-30">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="banner-main-home">                                
-                <div class="banner-main-home-text">
-                    <div class="heading">
-                        <h1>孙奥</h1>
-                        <p class="text-uppercase">为你，千千万万遍</p>
-                    </div>
-                    <div class="desc">
-                        <p>这是我的个人网页，本人对Fintech技术比较感兴趣，欢迎大家交流 <a rel="nofollow" href="http://unsplash.com" target="_parent"></a></p>
-                        <a href="about.html"><button type="button" class="">查看基本信息</button></a>
-                    </div>
-                </div>
-                <img src="assets/images/home-img-1.png" alt="Image" class="img-responsive">
-            </div>                        
-        </div>    
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {% if site.logo %}
+                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </h1>
+            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
+        </div>
+        {% include site-nav.html %}
     </div>
-    <div class="row margin-b-30">
+</header>
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="div5">
-			<ul id="ul1" style="list-style:none;padding:0px;">
-			<li style="list-style-type:none;">
-            <div class="box london" id="div1">
-                <div class="box-icon">
-                    <img src="assets/images/home-img-2.jpg" alt="Image" class="img-responsive">
-                </div>
-                <div class="info float-container">
-                    <div class="col-sm-12 london-title">
-                        <h3 class="text-uppercase">春华秋实</h3>
-                        <h4 class="text-uppercase">无边落木萧萧下</h4>
-                    </div>
-                    <p>在这里我将记录我的软件学习过程。</p><hr />
-                    <div class="col-sm-12 location-main"> 
-                        <div class="pull-left location">
-                            <i class="fa fa-map-marker fa-2x"></i><span>华中科技大学</span>
-                        </div>
-                        <div class="pull-right user-icons">
-                            <a href="http://www.linkedin.com/in/sun-ao-a79496148/"><img style="width:20px;height:20px;" src="assets/icons/linkedin.png"></a>
-                            <a href="https://github.com/whosedaddy"><img style="width:20px;height:20px;" src="assets/icons/github.png"></a>
-                            <a href="https://weibo.com/1955936663/profile?rightmod=1&wvr=6&mod=personinfo"><img style="width:20px;height:20px;" src="assets/icons/weibo.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			</li>
-		
-			<li style="list-style-type:none;">
-            <div class="box london" id="div2">
-                <div class="box-icon">
-                    <img src="assets/images/home-img-3.jpg" alt="Image" class="img-responsive">
-                </div>
-                <div class="info float-container">
-                    <div class="col-sm-12 london-title">
-                        <h3 class="text-uppercase">烁玉流金</h3>
-                        <h4 class="text-uppercase">接天莲叶无穷碧</h4>
-                    </div>
-                    <p>在这里我将记录我的软件学习过程。</p><hr />
-                    <div class="col-sm-12 location-main"> 
-                        <div class="pull-left location">
-                            <i class="fa fa-map-marker fa-2x"></i><span>华中科技大学</span>
-                        </div>
-                        <div class="pull-right user-icons">
-                            <a href="http://www.linkedin.com/in/sun-ao-a79496148/"><img style="width:20px;height:20px;" src="assets/icons/linkedin.png"></a>
-                            <a href="https://github.com/whosedaddy"><img style="width:20px;height:20px;" src="assets/icons/github.png"></a>
-                            <a href="https://weibo.com/1955936663/profile?rightmod=1&wvr=6&mod=personinfo"><img style="width:20px;height:20px;" src="assets/icons/weibo.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			</li>
-			</ul>
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            {%  include post-card.html %}
         </div>
 
-
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="div6">
-            <ul id="ul2" style="list-style:none;padding:0px;">
-			<li style="list-style-type:none;">
-			<div class="box paris" id="div3">
-                <div class="box-icon">
-                    <img src="assets/images/home-img-2.jpg" alt="Image" class="img-responsive">
-                </div>
-                <div class="info float-container">
-                    <div class="col-sm-12 london-title paris-title">
-                        <h3 class="text-uppercase">博文约礼</h3>
-                        <h4 class="text-uppercase">无边落木萧萧下</h4>
-                    </div>
-                    <p>在这里我将展示我学习后的成果。</p><hr />
-                    <div class="col-sm-12 location-main"> 
-                        <div class="pull-left location location2">
-                            <i class="fa fa-map-marker fa-2x"></i><span>香港中文大学（深圳）</span>
-                        </div>
-                        <div class="pull-right user-icons">
-                            <a href="http://www.linkedin.com/in/sun-ao-a79496148/"><img style="width:20px;height:20px;" src="assets/icons/linkedin.png"></a>
-                            <a href="https://github.com/whosedaddy"><img style="width:20px;height:20px;" src="assets/icons/github.png"></a>
-                            <a href="https://weibo.com/1955936663/profile?rightmod=1&wvr=6&mod=personinfo"><img style="width:20px;height:20px;" src="assets/icons/weibo.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			</li>
-
-			<li style="list-style-type:none;">
-            <div class="box paris" id="div4">
-                <div class="box-icon">
-                    <img src="assets/images/home-img-3.jpg" alt="Image" class="img-responsive">
-                </div>
-                <div class="info float-container">
-                    <div class="col-sm-12 london-title paris-title">
-                        <h3 class="text-uppercase">鉴往知来</h3>
-                        <h4 class="text-uppercase">接天莲叶无穷碧</h4>
-                    </div>
-                    <p>在这里我将展示我学习后的成果。</p><hr />
-                    <div class="col-sm-12 location-main"> 
-                        <div class="pull-left location location2">
-                            <i class="fa fa-map-marker fa-2x"></i><span>香港中文大学（深圳）</span>
-                        </div>
-                        <div class="pull-right user-icons">
-                            <a href="http://www.linkedin.com/in/sun-ao-a79496148/"><img style="width:20px;height:20px;" src="assets/icons/linkedin.png"></a>
-                            <a href="https://github.com/whosedaddy"><img style="width:20px;height:20px;" src="assets/icons/github.png"></a>
-                            <a href="https://weibo.com/1955936663/profile?rightmod=1&wvr=6&mod=personinfo"><img style="width:20px;height:20px;" src="assets/icons/weibo.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			</li>
-			</ul>
-        </div>
-    </div> 
-	<!-- row -->
-    <div class="row" style="position:float;">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="box bottom-main">
-                <div class="info float-container">
-                    <div class="col-sm-12 bottom-title">
-                        <h3 class="text-uppercase">竹杖芒鞋</h3>
-                        <h4 class="text-uppercase">蓦然回首，却在灯火阑珊处</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                            <div class="bottom-img">
-                                <img src="assets/images/home-img-4.jpg" alt="Image">
-                                <p class="first">千树万树梨花开</p>    
-                            </div>                                      
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                            <div class="bottom-img">
-                                <img src="assets/images/home-img-5.jpg" alt="Image">
-                                <p class="second">会挽雕弓如满月</p>    
-                            </div>                                      
-                        </div>
-                        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                            <div class="bottom-img">
-                                <img src="assets/images/home-img-6.jpg" alt="Image">
-                                <p class="third">木叶飞舞的地方，火亦生生不息</p>    
-                            </div>                                      
-                        </div>
-                    </div>
-                    <p class="bottom-desc">这里会记录一些博主感兴趣的事情 </p><hr />
-                    <div class="col-sm-12 location-main"> 
-                        <div class="pull-right bottom-user">
-                            <a href="#"><i class="fa fa-caret-right"></i><span>阅读更多</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- row -->
-</div> <!-- .content-main -->
-</div> <!-- .main-page -->
-</div> <!-- .row -->           
-	
+    </div>
+</main>
