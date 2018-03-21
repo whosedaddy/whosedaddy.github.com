@@ -1,20 +1,20 @@
 # site settings
-title: Cardinal
-subtitle: Welcome！
-email: 217010022@link.cuhk.edu.cn  
-description: 请多多指教，有失远迎，还请包含
+title: "Cardinal"
+subtitle: "Welcome！"
+email: "217010022@link.cuhk.edu.cn"
+description: u"请多多指教，有失远迎，还请包含"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: www.whosedaddy.github.io# the base hostname & protocol for your site
-author:Sunao
-street_address: 云端大道
-city: 深圳
-state: 广东
-zip_code: 431600
-country: 中国
-phone: +8617603062105
+url: "www.whosedaddy.github.io"# the base hostname & protocol for your site
+author: "Sunao"
+street_address: u"云端大道"
+city: u"深圳"
+state: u"广东"
+zip_code: u"431600"
+country: u"中国"
+phone: 17603062105
 
 # homepage tiles
-tiles-source: Hi！ # accepts "posts" or "pages"
+tiles-source: "posts" # accepts "posts" or "pages"
 tiles-count: 6
 
 # social settings
