@@ -1,0 +1,11 @@
+# User interface text and labels
+
+# English (default)
+# -----------------
+Sun Ao:
+    name: "Sun Ao"
+    url: "http://lywjn.com"
+    email: "402920965@qq.com"
+    bio: "竹杖芒鞋轻胜马"
+    avatar: "/assets/images/bio-photo-2.jpg"
+    weibo: ""
