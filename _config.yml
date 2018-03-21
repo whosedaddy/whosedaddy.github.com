@@ -10,20 +10,20 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+#theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "Github blog"
+title                    : "闹闹的个人小站"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "My github blog"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://whosedaddy.github.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "whosedaddy/whosedaddy.github.com" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -38,8 +38,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
+  allowedFields          : ['name', 'email', 'url', 'message'] # ['name', 'email', 'url', 'message']
+  branch                 : "master"
   commitMessage          : # "New comment."
   filename               : # comment-{@timestamp}
   format                 : # "yml"
@@ -47,7 +47,7 @@ staticman:
   path                   : # "/_data/comments/{options.slug}" (default)
   requiredFields         : # ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : "md5"
   generatedFields:
     date:
       type               : # "date"
@@ -97,20 +97,20 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "孙奥"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
-  uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  location         : "深圳"
+  email            : "402920965@qq.com"
+  uri              : 
+  home             : "https://github.com/whosedaddy" # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "https://github.com/whosedaddy"
   gitlab           :
   google_plus      :
   keybase          :
