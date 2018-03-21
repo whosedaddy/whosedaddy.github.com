@@ -1,36 +1,38 @@
-# site settings
-title:"Cardinal"
-subtitle:"Welcome！"
-email:"217010022@link.cuhk.edu.cn"
-description:u"请多多指教，有失远迎，还请包含"
-baseurl:"/blog" # the subpath of your site, e.g. /blog
-url:"www.whosedaddy.github.io"# the base hostname & protocol for your site
-author:"Sunao"
-street_address:u"云端大道"
-city:u"深圳"
-state:u"广东"
-zip_code:431600
-country:u"中国"
-phone: 17603062105
+# ----------- CONFIGURABLE START -----------
+title:            "LiberXue|FullStack|独立开发者|jekyll blog|GitHub blog"
+description:      "Full Stack独立开发者|欢迎来到 LiberXue「角落」侃侃理想、谈谈人生、敲敲代码。"
+url:              https://liberxue.github.io # 域名
+signoff:          "LiberXue" # Your name
+facebook_appid:   #liberxue
+google_analytics: UA-101222464-1
+share:            true 
+# 分页
+paginate: 15
+paginate_path: "liberxuepage:num"
+gems: [jekyll-paginate]
+links:
+  - name:         首页
+    url:          /
+    external:     false
+  - name:         书籍
+    url:          /book
+    external:     false
+  - name:         旅游
+    url:          /road
+    external:     false
+  - name:         归档
+    url:          /archives
+    external:     false
+  - name:         标签
+    url:          /tags
+    external:     false
+  - name:         关于
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
 
-# homepage tiles
-tiles-source: "posts" # accepts "posts" or "pages"
-tiles-count: 6
-
-# social settings
-500px_url:
-facebook_url:
-github_url:https://github.com/whosedaddy
-gitlab_url: 
-googleplus_url: 
-instagram_url: 
-linkedin_url: http://www.linkedin.com/in/sun-ao-a79496148/
-pinterest_url:
-slack_url:
-twitter_url: 
-
-# build settings
-markdown: cmdmarkdown
-
-sass:
-  style: compressed
+#permalink:        /:categories/:title.html
+permalink: /:year/:month/:day/:title.html
+defaults:
+  - values:
+      layout: "default"
