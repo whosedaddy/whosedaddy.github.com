@@ -1,11 +1,11 @@
 ---
 layout: archive
-title: "日志"
-permalink: /sitemap/
+title: "小仓库"
+permalink: /warehouse/
 author_profile: false
 ---
 
-所有的博文都在这个列表上。这些记录的格式都是 [XML version]({{ "sitemap.xml" | relative_url }}).
+所有的博文都在这个列表上。这些记录的格式都是 [XML version]({{ "warehouse.xml" | relative_url }}).
 
 <h2>Pages</h2>
 {% for post in site.pages %}

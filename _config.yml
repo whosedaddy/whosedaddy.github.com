@@ -267,20 +267,20 @@ defaults:
       share: true
       related: true
       
-# collections:
-  # portfolio:
-    # output: true
-    # permalink: /:collection/:path/
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/_portfolio/
     
-# defaults:
+defaults:
   # _portfolio
-  # - scope:
-      # path: ""
-      # type: portfolio
-    # values:
-      # layout: single
-      # author_profile: false
-      # read_time: true
-      # comments: true
-      # share: true
-      # related: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
