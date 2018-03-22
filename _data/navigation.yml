@@ -6,8 +6,8 @@ main:
     url: /about/
   - title: "博文"
     url: /year-archive/
-  - title: "我的收藏"
+  - title: "合集"
     url: /collection-archive/
-  - title: "日志"
-    url: /sitemap/
+  # - title: "日志"
+    # url: /sitemap/
     description:
