@@ -2,14 +2,14 @@
 main:
   #- title: "Quick-Start Guide"
     #url: https://whosedaddy.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "关于我"
-    url: /about/
   - title: "博文"
     url: /year-archive/
   - title: "专题"
     url: /tags/
   - title: "分类"
     url: /categories/
+  - title: "关于我"
+    url: /about/
   # - title: "小仓库"
     # url: /warehouse/
     description:

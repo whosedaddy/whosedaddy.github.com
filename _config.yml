@@ -23,7 +23,7 @@ description              : "An amazing website."
 url                      : "https://whosedaddy.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "whosedaddy/whosedaddy.github.com" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/unsplash-gallery-image-1-th.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -57,7 +57,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : feed.xml # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : lunr # lunr (default), algolia
@@ -98,10 +98,10 @@ analytics:
 # Site Author
 author:
   name             : "孙奥"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  avatar           : /assets/images/portrait.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "竹杖芒鞋轻胜马，一蓑烟雨任平生"
   location         : "深圳"
-  email            : "402920965@qq.com"
+  email            : "217010022@link.cuhk.edu.com"
   uri              : 
   home             : "https://github.com/whosedaddy" # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -116,7 +116,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "sun-ao-a79496148"# "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
@@ -266,21 +266,32 @@ defaults:
       comments: true
       share: true
       related: true
+      # path: ""
+      # type: portfolio
+    # values:
+      # layout: single
+      # author_profile: true
+      # read_time: true
+      # comments: true
+      # share: true
+      # related: true
+
+
       
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/_portfolio/
+# collections:
+  # portfolio:
+    # output: true
+    # permalink: /:collection/_portfolio/
     
-defaults:
+# defaults:
   # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+  # - scope:
+      # path: ""
+      # type: portfolio
+    # values:
+      # layout: single
+      # author_profile: true
+      # read_time: true
+      # comments: true
+      # share: true
+      # related: true
